@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Open Multiple Tabs and Search Example</title>
+  </head>
+  <body>
+    <button onclick="openTabs()">Open Multiple Tabs and Search</button>
+
+    <script>
+      function openTabs() {
+        // URLs to open in new tabs
+        const urls = [
+          "https://www.bing.com/search?q=What+are+the+benefits+of+spending+time+in+nature",
+          "https://www.bing.com/search?q=How+do+plants+adapt+to+their+environment",
+          "https://www.bing.com/search?q=What+is+the+impact+of+deforestation+on+the+environment",
+          "https://www.bing.com/search?q=Why+are+bees+important+for+pollination",
+          "https://www.bing.com/search?q=How+do+ecosystems+work",
+          "https://www.bing.com/search?q=What+is+climate+change+and+its+effects+on+nature",
+          "https://www.bing.com/search?q=How+do+animals+hibernate+in+winter",
+          "https://www.bing.com/search?q=What+are+some+endangered+species+and+their+conservation+efforts",
+          "https://www.bing.com/search?q=Why+is+biodiversity+important+for+ecosystems",
+          "https://www.bing.com/search?q=How+are+coral+reefs+formed+and+why+are+they+threatened",
+          "https://www.bing.com/search?q=What+are+the+different+types+of+forests+in+the+world",
+          "https://www.bing.com/search?q=How+do+tides+work+in+the+ocean",
+          "https://www.bing.com/search?q=What+are+the+effects+of+plastic+pollution+on+marine+life",
+          "https://www.bing.com/search?q=How+do+birds+migrate+and+navigate+long+distances",
+          "https://www.bing.com/search?q=What+is+the+role+of+wetlands+in+nature+conservation",
+          "https://www.bing.com/search?q=How+do+mountains+form+and+impact+weather+patterns",
+          "https://www.bing.com/search?q=What+is+the+importance+of+clean+water+sources+for+nature",
+          "https://www.bing.com/search?q=How+do+natural+disasters+like+hurricanes+and+earthquakes+occur",
+          "https://www.bing.com/search?q=Why+is+the+Amazon+Rainforest+vital+for+global+climate",
+          "https://www.bing.com/search?q=What+is+the+life+cycle+of+a+butterfly",
+        ];
+
+        // Function to open tabs with a delay
+        function openTabWithDelay(index) {
+          if (index < urls.length) {
+            window.open(urls[index], "_blank");
+            setTimeout(function () {
+              openTabWithDelay(index + 1);
+            }, 2000); // Open the next tab after a 1-second delay
+          }
+        }
+
+        openTabWithDelay(0); // Start opening tabs from the first URL
+      }
+    </script>
+  </body>
+</html>
